@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    scroll-behavior: smooth;
+}
+
+:root {
+    --c-main-1: hsl(72, 100%, 50%);
+    --c-main-1-faded: hsla(72, 100%, 50%, 0.2);
+    --c-main-2: hsl(144, 100%, 50%);
+    --c-main-2-faded: hsla(144, 100%, 50%, 0.2);
+    --c-main-3: hsl(216, 100%, 50%);
+    --c-main-3-faded: hsla(216, 100%, 50%, 0.2);
+    --c-main-4: hsl(288, 100%, 50%);
+    --c-main-4-faded: hsla(288, 100%, 50%, 0.2);
+    --c-main-5: hsl(360, 100%, 50%);
+    --c-main-5-faded: hsla(360, 100%, 50%, 0.2);
+
+    --c-bg-light: rgb(235, 235, 235);
+    --c-bg-light-faded: rgba(235, 235, 235, 0.8);
+    --c-bg-dark: rgb(20, 20, 20);
+    --c-bg-dark-faded: rgba(20, 20, 20, 0.8);
+
+    --border: 3px solid;
+    --border-radius: 20px;
+
+    --transition: 300ms ease-in-out;
+}
+
+body {
+    color: var(--c-bg-dark);
+    background-color: var(--c-bg-light);
+
+    overflow-x: hidden;
+    transition: var(--transition);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 0 5rem;
+}
+
+main section {
+    padding: 2rem 0;
+}
+
+@media screen and (max-width: 900px) {
+    main {
+        padding: 0 1rem;
+    }
+}
+
+/* Font Families */
+nav,
+h1,
+h5 {
+    font-family: "Merriweather", serif;
+}
+
+p,
+span,
+li {
+    font-family: "Roboto", sans-serif;
+}
+
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100dvh;
+    width: 100dvw;
+
+    background: var(--c-bg-dark);
+
+    z-index: 1000;
+    transition: 500ms ease-in-out;
+}
+
+#loading-screen.loaded {
+    opacity: 0;
+}
+
+#loading-screen.loaded-fin {
+    display: none;
+}
+
+.lds-ring {
+    --ring-size: 15rem;
+
+    position: relative;
+
+    display: inline-block;
+
+    width: var(--ring-size);
+    height: var(--ring-size);
+
+    background: url("../img/landingPage/logo.png") no-repeat;
+    background-position: center;
+}
+
+.lds-ring > * {
+    position: absolute;
+}
+
+#loading-screen.loaded .lds-ring > * {
+    border-color: greenyellow;
+}
+
+.lds-ring div {
+    display: block;
+
+    margin: 8px;
+    width: var(--ring-size);
+    height: var(--ring-size);
+
+    border: 8px solid #fff;
+    border-radius: 50%;
+    border-color: #fff transparent transparent transparent;
+
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

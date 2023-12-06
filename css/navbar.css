@@ -1,0 +1,166 @@
+nav {
+    --nav-height: 3.5rem;
+
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 1rem;
+    height: var(--nav-height);
+
+    background: var(--c-bg-light-faded);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    transition: var(--transition);
+    z-index: 200;
+}
+
+/* body.darkMode nav {
+    background: var(--c-bg-dark-faded);
+} */
+
+nav img {
+    height: 3rem;
+}
+
+nav > span.material-symbols-outlined {
+    display: none;
+}
+
+nav #nav-aside {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    padding: 0.3rem 0.5rem;
+
+    color: var(--c-bg-dark);
+    font-size: 1.5rem;
+    text-decoration: none;
+
+    font-family: "Merriweather", serif;
+
+    transition: var(--transition);
+}
+
+body.darkMode nav a {
+    color: var(--c-bg-light);
+}
+
+nav a:hover:nth-child(1) {
+    color: var(--c-main-1);
+}
+
+nav a:hover:nth-child(2) {
+    color: var(--c-main-2);
+}
+
+nav a:hover:nth-child(3) {
+    color: var(--c-main-3);
+}
+
+nav a:hover:nth-child(4) {
+    color: var(--c-main-4);
+}
+
+nav a:hover:nth-child(5) {
+    color: var(--c-main-5);
+}
+
+/* Light/Dark Mode Btn */
+#LightDarkModeBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--c-bg-dark);
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+body.darkMode #LightDarkModeBtn {
+    color: var(--c-bg-light);
+}
+
+#LightDarkModeBtn span {
+    font-size: 3rem;
+}
+
+#LightDarkModeBtn span.hidden {
+    display: none;
+}
+
+/* Light/Dark Mode Symbols */
+body.darkMode #light-btn {
+    display: none;
+}
+
+#dark-btn {
+    display: none;
+}
+
+body.darkMode #dark-btn {
+    display: block;
+}
+
+/* Nav Location */
+#nav-location {
+    position: absolute;
+
+    height: 100%;
+    width: 111px;
+    border-bottom: 2px solid var(--c-main-1);
+    background: linear-gradient(0deg, var(--c-main-1-faded), transparent);
+    filter: drop-shadow(0 -5px 10px var(--c-main-1));
+
+    transition: var(--transition);
+}
+
+@media screen and (max-width: 700px) {
+    nav > span.material-symbols-outlined {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 2rem;
+    }
+
+    nav #nav-aside {
+        display: none;
+    }
+
+    nav #nav-aside.expanded {
+        position: absolute;
+        top: var(--nav-height);
+        left: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+
+        background: var(--c-bg-light-faded);
+        backdrop-filter: blur(3px);
+        -webkit-backdrop-filter: blur(3px);
+    }
+
+    nav #nav-aside.expanded a {
+        width: 100%;
+
+        text-align: right;
+    }
+
+    body.darkMode nav #nav-aside.expanded {
+        background: var(--c-bg-dark-faded);
+    }
+}

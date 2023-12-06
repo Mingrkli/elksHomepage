@@ -1,0 +1,609 @@
+/* Main Sections Global
+===================================================================== */
+main section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+
+    padding: 5rem 0;
+    width: 100%;
+}
+
+main section div > p {
+    font-size: 2rem;
+}
+
+main section span,
+.member-profile h1,
+.member-bullets li {
+    font-size: 3rem;
+}
+
+@media screen and (max-width: 900px) {
+    main section div > p {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    main section span,
+    .member-profile h1,
+    .member-bullets li {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mission
+===================================================================== */
+#mission > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+
+    opacity: 0.1;
+    transition: var(--transition);
+}
+
+#mission > div.show {
+    opacity: 1;
+}
+
+#mission div.alt > p {
+    text-align: right;
+}
+
+#mission span {
+    color: var(--c-main-1);
+    text-shadow: 0 0 3px var(--c-bg-dark);
+}
+
+#mission div > div {
+    height: 20rem;
+    min-width: 30rem;
+
+    border: var(--border) var(--c-main-1);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px var(--c-bg-dark);
+
+    overflow: hidden;
+}
+
+#mission div > div > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    transition: var(--transition);
+}
+
+#mission div > div > img:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (max-width: 900px) {
+    #mission div {
+        flex-direction: column;
+    }
+
+    #mission div.alt > p {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    #mission div.alt {
+        flex-direction: column-reverse;
+    }
+
+    #mission div > div {
+        height: 15rem;
+        min-width: 100%;
+
+        border: var(--border) var(--c-main-1);
+        border-radius: var(--border-radius);
+
+        overflow: hidden;
+    }
+}
+
+/* Goals
+===================================================================== */
+#goals {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+
+    width: 100%;
+}
+
+#goals span {
+    color: var(--c-main-2);
+    text-shadow: 0 0 3px var(--c-bg-dark);
+}
+
+#goals > div {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 600px;
+
+    opacity: 0;
+    transition: var(--transition);
+    transform: translateX(50%);
+}
+
+#goals > div.show {
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+#goals > div.alt {
+    transform: translateX(-50%);
+}
+
+#goals > div.alt.show {
+    transform: translateX(0%);
+}
+
+.goals-imgs {
+    position: absolute;
+    top: 50%;
+    right: -5%;
+    transform: translateY(-50%) scale(0.7);
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    transition: var(--transition);
+}
+
+div.alt .goals-imgs {
+    left: -25%;
+}
+
+.goals-imgs img {
+    width: 150px;
+    aspect-ratio: 1/1;
+}
+
+#goals > div p {
+    padding: 1rem;
+    height: 100%;
+    width: 100%;
+
+    background-color: var(--c-bg-light);
+    border: var(--border) var(--c-main-2);
+    border-radius: var(--border-radius);
+
+    transition: var(--transition);
+    z-index: 100;
+}
+
+body.darkMode #goals > div p {
+    background-color: var(--c-bg-dark);
+}
+
+#goals > div:hover p {
+    box-shadow: 0 0 10px 5px var(--c-main-2);
+}
+
+#goals > div:hover .goals-imgs {
+    right: -20%;
+    transform: translateY(-50%) scale(1);
+}
+
+.cen {
+    transition: var(--transition);
+}
+
+#goals > div:hover .goals-imgs .cen {
+    transform: translateX(50%);
+}
+
+#goals > div.alt:hover .goals-imgs {
+    left: -20%;
+}
+
+@media screen and (max-width: 900px) {
+    #goals {
+        overflow-x: hidden;
+    }
+
+    #goals > div {
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        background-color: var(--c-bg-light);
+        border: var(--border) var(--c-main-2);
+        border-radius: var(--border-radius);
+
+        width: 100%;
+    }
+
+    body.darkMode #goals > div {
+        background-color: var(--c-bg-dark);
+    }
+
+    .goals-imgs {
+        position: static;
+        transform: none;
+
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+
+        margin-bottom: 1rem;
+
+        transition: var(--transition);
+    }
+
+    .goals-imgs img {
+        width: 50px;
+    }
+
+    #goals > div p {
+        padding: 1rem;
+        height: 100%;
+        width: 100%;
+
+        background-color: none;
+        border: none;
+        border-radius: none;
+
+        transition: var(--transition);
+        z-index: 100;
+    }
+
+    #goals > div:hover p {
+        box-shadow: none;
+    }
+
+    #goals > div:hover .goals-imgs .cen {
+        transform: none;
+    }
+
+    #goals > div:hover .goals-imgs {
+        transform: none;
+    }
+}
+
+/* Team
+===================================================================== */
+#team span {
+    color: var(--c-main-3);
+    text-shadow: 0 0 3px var(--c-bg-dark);
+}
+
+#teamGoalsContainer,
+#teamMembersContainer {
+    margin-bottom: 10rem;
+    width: 100%;
+
+    opacity: 0;
+}
+
+#teamGoalsContainer.show,
+#teamMembersContainer.show {
+    opacity: 1;
+    transition: var(--transition);
+}
+
+#teamGoalsBtns,
+#teamMembersBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    width: 100%;
+}
+
+#teamGoalsBtns button,
+#teamMembersBtns button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem;
+    height: 100px;
+    width: 100px;
+
+    color: var(--c-bg-dark);
+    font-size: 3rem;
+    background: none;
+    border: var(--border) var(--c-main-3);
+    border-radius: 100%;
+
+    opacity: 0;
+    cursor: pointer;
+}
+
+#teamGoalsContainer.show #teamGoalsBtns button,
+#teamGoalsContainer.show #teamMembersBtns button {
+    opacity: 1;
+}
+
+body.darkMode #teamGoalsBtns button,
+body.darkMode #teamMembersBtns button {
+    color: var(--c-bg-light);
+}
+
+#teamGoalsBtns button:hover,
+#teamMembersBtns button:hover {
+    box-shadow: 0 0 5px 1px var(--c-main-3);
+}
+
+#teamGoalsBtns button.selected-goal,
+#teamMembersBtns button.selected-goal {
+    background: var(--c-main-3);
+}
+
+#teamGoalsShow,
+#teamMembersShow {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+#teamGoalsShow > div,
+#teamMembersShow > div {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+
+    text-align: center;
+
+    opacity: 0;
+    transition: var(--transition);
+
+    overflow: hidden;
+}
+
+#teamMembersShow > div {
+    position: static;
+    transform: translateX(0%);
+
+    display: none;
+
+    height: 100%;
+}
+
+#teamGoalsShow > div.selected-goal,
+#teamMembersShow > div.selected-goal {
+    opacity: 1;
+}
+
+#teamMembersShow > div.selected-goal {
+    display: block;
+}
+
+/* Team Members */
+#teamMembersBtns button {
+    padding: 0;
+
+    opacity: 0.3;
+}
+
+#teamMembersBtns button img {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 100%;
+    object-fit: cover;
+
+    user-select: none;
+    pointer-events: none;
+}
+
+#teamMembersBtns button.selected-goal {
+    opacity: 1;
+}
+
+/* Team Members Profiles */
+.member-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+
+    padding: 1rem;
+
+    height: 100%;
+
+    border: var(--border) var(--c-main-3);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 5px 1px var(--c-main-3);
+
+    overflow: hidden;
+}
+
+.member-profile img {
+    float: left;
+
+    border-radius: 100%;
+    shape-outside: circle();
+}
+
+.member-profile p {
+    text-align: left;
+}
+
+.member-bullets li {
+    margin-left: 1rem;
+
+    color: var(--c-main-3);
+    font-size: 2rem;
+    text-align: left;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1400px) {
+    .member-profile p {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #teamGoalsBtns button,
+    #teamMembersBtns button {
+        padding: 1rem;
+        height: 50px;
+        width: 50px;
+    }
+
+    .member-profile img {
+        width: 100px;
+    }
+
+    .member-profile p {
+        font-size: 1rem;
+    }
+
+    .member-bullets li {
+        font-size: 1rem;
+    }
+}
+
+/* Sprints
+===================================================================== */
+#sprints span {
+    color: var(--c-main-4);
+}
+
+#sprints #sprintAssignments {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+    width: 100%;
+
+    overflow: hidden;
+}
+
+#sprints #sprintAssignments a {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    text-decoration: none;
+    border: var(--border) var(--c-main-4);
+    border-radius: var(--border-radius);
+
+    transition: var(--transition);
+    overflow: hidden;
+}
+
+#sprints #sprintAssignments a:hover {
+    box-shadow: 0 0 10px 5px var(--c-main-4);
+}
+
+#sprints #sprintAssignments a div {
+    height: 250px;
+
+    overflow: hidden;
+}
+
+/* Card Img */
+#sprints #sprintAssignments .cardImg {
+    position: relative;
+}
+
+#sprints #sprintAssignments .cardImg .cardImgMain {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+#sprints #sprintAssignments a:hover .cardImg .cardImgMain {
+    transform: scale(1.2);
+}
+
+#sprints #sprintAssignments a .cardImg .madeBy {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100px;
+
+    z-index: 3;
+}
+
+/* Card Text */
+#sprints #sprintAssignments a .cardText {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    height: 0;
+
+    padding: 0.5rem;
+
+    box-shadow: 0 -10px 20px 10px black;
+
+    overflow: hidden;
+    transition: var(--transition);
+    z-index: 2;
+}
+
+#sprints #sprintAssignments a .cardText.show {
+    height: 250px;
+}
+
+#sprints #sprintAssignments a .cardText span {
+    display: block;
+    text-align: center;
+}
+
+#sprints #sprintAssignments a .cardText p {
+    color: var(--c-bg-dark);
+    font-size: 1.1rem;
+
+    overflow: hidden;
+}
+
+body.darkMode #sprints #sprintAssignments a .cardText p {
+    color: var(--c-bg-light);
+}
+
+@media screen and (max-width: 1000px) {
+    #teamGoalsBtns button,
+    #teamMembersBtns button {
+        padding: 1rem;
+        height: 50px;
+        width: 50px;
+    }
+
+    .member-profile img {
+        width: 100px;
+    }
+
+    .member-profile p {
+        font-size: 1rem;
+    }
+
+    .member-bullets li {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Elks Team</title>
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+        <link rel="stylesheet" href="./css/global.css" />
+        <link rel="stylesheet" href="./css/navbar.css" />
+        <link rel="stylesheet" href="./css/home.css" />
+        <link rel="stylesheet" href="./css/sections.css" />
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"
+            defer
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"
+            defer
+        ></script>
+        <script src="./data/our-team.js"></script>
+        <script src="./js/navBar.js" defer></script>
+        <script src="./js/parallax.js" defer></script>
+        <script src="./js/sectionObserver.js" defer></script>
+        <script src="./js/sectionTeam.js" defer></script>
+        <script src="./js/loadingScreen.js" defer></script>
+    </head>
+
+    <body>
+        <nav>
+            <a data-section="0" href="#home">
+                <img src="./img/landingPage/logo.png" alt="Logo" />
+            </a>
+            <span id="phone-menu-btn" class="material-symbols-outlined">
+                menu
+            </span>
+
+            <div id="nav-aside">
+                <a data-section="1" href="#mission" class="selected">Mission</a>
+                <a data-section="2" href="#goals">Goals</a>
+                <a data-section="3" href="#team">Team</a>
+                <a data-section="4" href="#sprints">Sprints</a>
+                <!-- <a data-section="5" href="#reviews">Reviews</a> -->
+                <button id="LightDarkModeBtn">
+                    <span
+                        id="light-btn"
+                        class="material-symbols-outlined light-btn"
+                    >
+                        light_mode
+                    </span>
+                    <span id="dark-btn" class="material-symbols-outlined">
+                        dark_mode
+                    </span>
+                </button>
+                <div id="nav-location"></div>
+            </div>
+        </nav>
+
+        <section data-section="0" id="home">
+            <div id="home-lightmode">
+                <img id="sun" src="./img/landingPage/sun.png" alt="sun" />
+                <img
+                    id="mountain4"
+                    src="./img/landingPage/mountain 4.png"
+                    alt="mountains"
+                />
+                <img
+                    id="mountain3"
+                    src="./img/landingPage/mountain 3.png"
+                    alt="mountains"
+                />
+                <img
+                    id="mountain2"
+                    class="foreground"
+                    src="./img/landingPage/mountain 2.png"
+                    alt="mountains"
+                />
+                <img
+                    class="foreground"
+                    src="./img/landingPage/mountain 1.png"
+                    alt="mountains"
+                />
+            </div>
+
+            <div id="home-darkmode">
+                <img id="stars" src="./img/landingPage/stars.png" alt="stars" />
+                <img id="moon" src="./img/landingPage/moon.png" alt="moon" />
+                <img
+                    id="mountainDark4"
+                    class="mountainDark"
+                    src="./img/landingPage/mountain dark 4.png"
+                    alt="mountains"
+                />
+                <img
+                    id="mountainDark3"
+                    class="mountainDark"
+                    src="./img/landingPage/mountain dark 3.png"
+                    alt="mountains"
+                />
+                <img
+                    id="mountainDark2"
+                    class="mountainDark foreground"
+                    src="./img/landingPage/mountain dark 2.png"
+                    alt="mountains"
+                />
+                <img
+                    class="mountainDark foreground"
+                    src="./img/landingPage/mountain dark 1.png"
+                    alt="mountains"
+                />
+            </div>
+
+            <div id="teamLogo">
+                <img src="./img/landingPage/elksLogo.png" alt="Elks Logo" />
+                <h5>Elks</h5>
+            </div>
+        </section>
+
+        <main>
+            <section data-section="1" id="mission">
+                <div>
+                    <p>
+                        <span>Elk's Software Development</span> strives to
+                        create dynamic, responsive content that represents the
+                        goals and values of our esteemed clientele.
+                    </p>
+                    <div>
+                        <img src="./img/techWorkers/techWorkers1.jpg" alt="" />
+                    </div>
+                </div>
+
+                <div class="alt">
+                    <div>
+                        <img src="./img/techWorkers/techWorkers2.jpg" alt="" />
+                    </div>
+                    <p>
+                        It is <span>Our mission</span> to understand the needs
+                        of our customers in order to help their business grow.
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Utilizing ambitious marketing approaches, strategic
+                        analytics and performance driven business solutions, to
+                        elevate your company's
+                        <span>
+                            Brand Awareness, Community Engagements, &
+                            Productivity</span
+                        >
+                        with the help of our intelligent systems engineers.
+                    </p>
+                    <div>
+                        <img src="./img/techWorkers/techWorkers3.jpg" alt="" />
+                    </div>
+                </div>
+
+                <span>We are here to help</span>
+            </section>
+
+            <section data-section="2" id="goals">
+                <div>
+                    <p>
+                        Beyond the Elk's Software Development
+                        <span>Mission Statement</span>; the members of the Elks
+                        choose to conduct the bulk of our development through
+                        Webstorm, PHPStorm, and Visual Studio Code.
+                    </p>
+
+                    <div class="goals-imgs">
+                        <img
+                            src="./img/sectionGoals/webStorm.png"
+                            alt="WebStorm"
+                        />
+                        <img
+                            class="cen"
+                            src="./img/sectionGoals/phpStorm.png"
+                            alt="PhpStorm"
+                        />
+
+                        <img src="./img/sectionGoals/vscode.png" alt="VScode" />
+                    </div>
+                </div>
+
+                <div class="alt">
+                    <p>
+                        Additionally, we <span>Communicate</span> through
+                        Discord messages and in-person meetings. Our team meets
+                        at 11am on Tuesdays and Thursdays after class.
+                        Availabilities have been discussed and correspondence
+                        through group chats have been arranged.
+                    </p>
+
+                    <div class="goals-imgs">
+                        <img
+                            src="./img/sectionGoals/discord.png"
+                            alt="Discord"
+                        />
+                        <img
+                            src="./img/sectionGoals/clock.png"
+                            alt="Clock.png"
+                        />
+                    </div>
+                </div>
+
+                <div>
+                    <p>
+                        It is agreed upon that all <span>Conflicts</span> will
+                        first be addressed with team members not involved in the
+                        conflict and each one of us agrees to help resolve
+                        <span>Conflicts</span> between other members. If we
+                        still can't agree as a team, outside mediation will be
+                        sought after. Our goal is to share in the workload and
+                        learn together. Through the merits of collaboration and
+                        cooperation, we as Elks will inform each other if we are
+                        struggling and believe it is in everyone's favor to
+                        assist each other in whichever way we can.
+                    </p>
+
+                    <div class="goals-imgs">
+                        <img
+                            src="./img/sectionGoals/angry.png"
+                            alt="Angry Emoji"
+                        />
+                        <img
+                            class="cen"
+                            src="./img/sectionGoals/handshake.png"
+                            alt="Handshake Emoji"
+                        />
+                        <img
+                            src="./img/sectionGoals/happy.png"
+                            alt="Happy Emoji"
+                        />
+                    </div>
+                </div>
+
+                <div class="alt">
+                    <p>
+                        Upon retrospective analysis of this
+                        <span>Working Agreement</span> we have decided that
+                        meetings conducted routinely on wednesdays at 8am is key
+                        to our success.
+                    </p>
+
+                    <div class="goals-imgs">
+                        <img
+                            src="./img/sectionGoals/checkmark.png"
+                            alt="Checkmark"
+                        />
+                    </div>
+                </div>
+            </section>
+
+            <section data-section="3" id="team">
+                <span>Team Goals</span>
+
+                <div id="teamGoalsContainer">
+                    <div id="teamGoalsBtns">
+                        <button data-section="1" class="selected-goal">
+                            1
+                        </button>
+                        <button data-section="2">2</button>
+                        <button data-section="3">3</button>
+                        <button data-section="4">4</button>
+                    </div>
+
+                    <div id="teamGoalsShow">
+                        <div data-section="1" class="selected-goal">
+                            <span
+                                >Actively participate in this learning process
+                            </span>
+                        </div>
+                        <div data-section="2">
+                            <span>Strive for performance driven results </span>
+                        </div>
+                        <div data-section="3">
+                            <span>Attendance with understanding at heart </span>
+                        </div>
+                        <div data-section="4">
+                            <span
+                                >Ultimately, transfer these skills to industry
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="teamMembersContainer">
+                    <div id="teamMembersBtns">
+                        <button data-section="1" class="selected-goal">
+                            <img
+                                src="./img/biographyIcons/bubbleTobyCropped.png"
+                                alt=""
+                            />
+                        </button>
+                        <button data-section="2">
+                            <img
+                                src="./img/biographyIcons/bubbleJaredCropped.png"
+                                alt=""
+                            />
+                        </button>
+                        <button data-section="3">
+                            <img
+                                src="./img/biographyIcons/bubbleKasynCropped.png"
+                                alt=""
+                            />
+                        </button>
+                        <button data-section="4">
+                            <img
+                                src="./img/biographyIcons/bubbleMingCropped.png"
+                                alt=""
+                            />
+                        </button>
+                    </div>
+
+                    <div id="teamMembersShow"></div>
+                </div>
+            </section>
+
+            <section data-section="4" id="sprints">
+                <span>Elks Sprints Projects</span>
+
+                <section id="sprintAssignments">
+                    <a
+                        href="https://elks.greenriverdev.com/sprintOne/indexSprintOne.html"
+                        target="_blank"
+                    >
+                        <div class="cardImg">
+                            <img
+                                class="cardImgMain"
+                                src="./img/projects/sprint1.png"
+                                alt=""
+                            />
+                            <img
+                                class="madeBy"
+                                src="./img/landingPage/logo.png"
+                                alt="Logo"
+                            />
+                        </div>
+
+                        <div class="cardText">
+                            <span>Sprint 1</span>
+                            <p>
+                                Elks team's first sprint creating a website for
+                                the client starts with the Requirements,
+                                Experience, and Contact pages. We also put in
+                                more work than expected as we want to show the
+                                client the possibilities of the website.
+                            </p>
+                        </div>
+                    </a>
+                    <a
+                        href="https://elks.greenriverdev.com/sprintTwo/indexSprintTwo.html"
+                        target="_blank"
+                    >
+                        <div class="cardImg">
+                            <img
+                                class="cardImgMain"
+                                src="./img/projects/sprint2.png"
+                                alt=""
+                            />
+                            <img
+                                class="madeBy"
+                                src="./img/landingPage/logo.png"
+                                alt="Logo"
+                            />
+                        </div>
+
+                        <div class="cardText">
+                            <span>Sprint 2</span>
+                            <p>
+                                Creating PHP pages to send data with additions
+                                of security to check the current form details
+                                before sending the user to the next page. We
+                                have learned to send emails as well as also
+                                incorporating feedback from the client since the
+                                last presentation for sprint 1.
+                            </p>
+                        </div>
+                    </a>
+                    <a
+                        href="https://elks.greenriverdev.com/sprintThree/index.php"
+                        target="_blank"
+                    >
+                        <div class="cardImg">
+                            <img
+                                class="cardImgMain"
+                                src="./img/projects/sprint3.png"
+                                alt=""
+                            />
+                            <img
+                                class="madeBy"
+                                src="./img/landingPage/logo.png"
+                                alt="Logo"
+                            />
+                        </div>
+
+                        <div class="cardText">
+                            <span>Sprint 3</span>
+                            <p>
+                                We have forms able to send data to phpMyAdmin
+                                which the information is stored so we can use it
+                                to generate dynamic pages in addition, we also
+                                added a color picker to help users assessability
+                                for color blind and for the user to pick their
+                                favorite colors.
+                            </p>
+                        </div>
+                    </a>
+                    <a
+                        href="https://elks.greenriverdev.com/sprintFour/index.php"
+                        target="_blank"
+                    >
+                        <div class="cardImg">
+                            <img
+                                class="cardImgMain"
+                                src="./img/projects/sprint4.png"
+                                alt=""
+                            />
+                            <img
+                                class="madeBy"
+                                src="./img/landingPage/logo.png"
+                                alt="Logo"
+                            />
+                        </div>
+
+                        <div class="cardText">
+                            <span>Sprint 4</span>
+                            <p>
+                                Added a log in for admin accounts in which lets
+                                them able to edit the requirements page. We have
+                                also added the ability to sort/filter in the
+                                viewEntries page. The dark mode also persist
+                                across pages using a cookie.
+                            </p>
+                        </div>
+                    </a>
+                    <a href="" onclick="return false;">
+                        <div class="cardImg">
+                            <img
+                                class="cardImgMain"
+                                src="https://rhinoshield.io/cdn/shop/collections/600X600.jpg?v=1661506742"
+                                alt=""
+                            />
+                            <img
+                                class="madeBy"
+                                src="./img/landingPage/logo.png"
+                                alt="Logo"
+                            />
+                        </div>
+
+                        <div class="cardText">
+                            <span>Sprint 5</span>
+                            <p>Working In Progress...</p>
+                        </div>
+                    </a>
+                    <a href="" onclick="return false;">
+                        <div class="cardImg">
+                            <img
+                                class="cardImgMain"
+                                src="https://ooni.com/cdn/shop/articles/20220211142347-margherita-9920_ba86be55-674e-4f35-8094-2067ab41a671.jpg?crop=center&height=800&v=1644590192&width=800"
+                                alt=""
+                            />
+                            <img
+                                class="madeBy"
+                                src="./img/landingPage/logo.png"
+                                alt="Logo"
+                            />
+                        </div>
+
+                        <div class="cardText">
+                            <span>Pizza</span>
+                            <p>
+                                Craving an unforgettable pizza experience? Look
+                                no further! At Elks Pizza, we craft culinary
+                                masterpieces that tantalize your taste buds and
+                                transport you to a world of flavor.
+                            </p>
+                        </div>
+                    </a>
+                </section>
+            </section>
+        </main>
+
+        <div id="loading-screen">
+            <div class="lds-ring">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </body>
+</html>
